@@ -201,10 +201,10 @@ shinyBS.addTooltip = function(id, type, opts) {
   opts = $.extend(opts, dopts);
   
   if(type == "tooltip") {
-    $id.tooltip("destroy");
+    $id.tooltip("dispose");
     $id.tooltip(opts);
   } else if(type == "popover") {
-    $id.popover("destroy");
+    $id.popover("dispose");
     $id.popover(opts);
   }
   
@@ -213,9 +213,9 @@ shinyBS.addTooltip = function(id, type, opts) {
 shinyBS.removeTooltip = function(id, type) {
   var $id = shinyBS.getTooltipTarget(id);
   if(type == "tooltip") {
-    $id.tooltip("destroy");
+    $id.tooltip("dispose");
   } else if(type == "popover") {
-    $id.popover("destroy");
+    $id.popover("dispose");
   }
 }
 
